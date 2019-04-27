@@ -4,7 +4,8 @@
   "description": "Web client for the best burger shop in the world",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "pretest": "./node_modules/.bin/eslint -c .eslintrc.js app/** test/**",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,23 @@
   "homepage": "https://github.com/josenberg/hamburgueria-client#readme",
   "dependencies": {
     "connected-react-router": "^6.4.0",
+    "history": "^4.9.0",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.0",
+    "react-router": "^5.0.0",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.7.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
   }
 }
