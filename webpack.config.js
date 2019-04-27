@@ -1,9 +1,7 @@
-const webpack = require('webpack');
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackDash = require('webpack-dashboard/plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
@@ -29,6 +27,19 @@ const config = {
       filename: path.join(paths.build, 'index.html'),
     }),
   ],
+  resolve: {
+    modules: [
+      path.resolve('./src'),
+      path.resolve('./node_modules'),
+    ],
+    extensions: ['.js', '.jsx'],
+    alias: {
+      '~': path.resolve(__dirname, 'app'),
+    },
+  },
+  devServer: {
+    historyApiFallback: true,
+  },
   devtool: 'source-map',
   module: {
     rules: [
@@ -48,7 +59,7 @@ const config = {
             options: {
               name: '[path][name]-[hash:8].[ext]',
             },
-          }
+          },
         ],
       },
     ],
