@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The grid should be abble to render its children without problems 1`] = `
+<div
+  className="grid"
+  style={
+    Object {
+      "colGap": "0px",
+      "display": "grid",
+      "gridTemplateColumns": "1fr 1fr",
+      "gridTemplateRows": "1fr",
+      "rowGap": "0px",
+    }
+  }
+>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "1",
+        "gridRow": "1",
+      }
+    }
+  >
+    Left Cell
+  </div>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "2",
+        "gridRow": "1",
+      }
+    }
+  >
+    Right Cell
+  </div>
+</div>
+`;
