@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
 
-import { CUSTOM_ORDER } from '~/constants/routes';
+import { CUSTOM_ORDER } from '@/constants/routes';
 
 import FoodMenu from './foodMenu';
 import CustomOrder from './customOrder';

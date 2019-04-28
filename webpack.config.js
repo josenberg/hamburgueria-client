@@ -34,7 +34,7 @@ const config = {
     ],
     extensions: ['.js', '.jsx'],
     alias: {
-      '~': path.resolve(__dirname, 'app'),
+      '@': path.resolve(__dirname, 'app'),
     },
   },
   devServer: {

@@ -29,13 +29,12 @@ const Grid = (props) => {
 Grid.defaultProps = {
   rows: 'auto',
   columns: 'auto',
-  style: null,
+  style: {},
   rowGap: '0px',
   colGap: '0px',
 };
 
 Grid.propTypes = {
-  // push: PropTypes.func.isRequired,
   rows: PropTypes.string,
   columns: PropTypes.string,
   children: PropTypes.oneOfType([
@@ -43,8 +42,8 @@ Grid.propTypes = {
     PropTypes.node,
   ]).isRequired,
   style: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.shape),
-    PropTypes.shape,
+    PropTypes.arrayOf(PropTypes.shape({})),
+    PropTypes.shape({}),
   ]),
   rowGap: PropTypes.string,
   colGap: PropTypes.string,

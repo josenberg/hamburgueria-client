@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { withRouter } from 'react-router';
 
 // Routes
 import Routes from './routes';
@@ -15,4 +14,4 @@ const Container = () => (
   </div>
 );
 
-export default withRouter(connect(null, null)(Container));
+export default connect(null, null)(Container);

@@ -18,11 +18,17 @@
   "bugs": {
     "url": "https://github.com/josenberg/hamburgueria-client/issues"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "^@(.*)$": "<rootDir>/app$1"
+    }
+  },
   "homepage": "https://github.com/josenberg/hamburgueria-client#readme",
   "dependencies": {
     "connected-react-router": "^6.4.0",
     "history": "^4.9.0",
     "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^6.0.0",
