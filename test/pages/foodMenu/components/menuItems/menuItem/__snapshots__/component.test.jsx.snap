@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render without issues 1`] = `
+<div
+  className="grid"
+  style={
+    Object {
+      "colGap": "0px",
+      "display": "grid",
+      "gridTemplateColumns": "1fr",
+      "gridTemplateRows": "auto auto",
+      "rowGap": "0px",
+    }
+  }
+>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "auto",
+        "gridRow": "auto",
+      }
+    }
+  >
+    <div
+      className="grid"
+      style={
+        Object {
+          "colGap": "0px",
+          "display": "grid",
+          "gridTemplateColumns": "100px 280px auto",
+          "gridTemplateRows": "1",
+          "margin": "5px auto",
+          "rowGap": "0px",
+          "width": "400px",
+        }
+      }
+    >
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "display": "grid",
+            "gridColumn": "1",
+            "gridRow": "1",
+          }
+        }
+      >
+        <img
+          alt="burger"
+          src="test-file-stub"
+          style={
+            Object {
+              "height": "80px",
+            }
+          }
+        />
+      </div>
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "display": "grid",
+            "gridColumn": "2",
+            "gridRow": "1",
+          }
+        }
+      >
+        <h2
+          style={
+            Object {
+              "fontFamily": "'Lalezar', cursive",
+              "margin": "5px 0 0 0",
+            }
+          }
+        >
+          X-Princesa
+        </h2>
+        <p
+          style={
+            Object {
+              "margin": "-10px 0 0 0",
+            }
+          }
+        >
+          Lanche
+        </p>
+        <p
+          style={
+            Object {
+              "margin": "0",
+            }
+          }
+        >
+          R$ 20,00
+        </p>
+      </div>
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "grid",
+            "gridColumn": "3",
+            "gridRow": "1",
+          }
+        }
+      >
+        <img
+          alt="Add to cart"
+          src="test-file-stub"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1556730995901" clover="3.2.0">
-  <project timestamp="1556730995901" name="All files">
-    <metrics statements="75" coveredstatements="75" conditionals="22" coveredconditionals="16" methods="23" coveredmethods="22" elements="120" coveredelements="113" complexity="0" loc="75" ncloc="75" packages="10" files="17" classes="17"/>
+<coverage generated="1556744932085" clover="3.2.0">
+  <project timestamp="1556744932085" name="All files">
+    <metrics statements="92" coveredstatements="92" conditionals="28" coveredconditionals="22" methods="26" coveredmethods="25" elements="146" coveredelements="139" complexity="0" loc="92" ncloc="92" packages="11" files="19" classes="19"/>
     <package name="app">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="storeConfig.jsx" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/storeConfig.jsx">
@@ -28,34 +28,34 @@
       <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="6" methods="3" coveredmethods="3"/>
       <file name="index.jsx" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/components/grid/index.jsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="52" count="3" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="52" count="5" type="stmt"/>
       </file>
       <file name="utilities.js" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/components/grid/utilities.js">
         <metrics statements="9" coveredstatements="9" conditionals="12" coveredconditionals="6" methods="2" coveredmethods="2"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="23" count="7" type="stmt"/>
-        <line num="28" count="7" type="cond" truecount="1" falsecount="1"/>
-        <line num="29" count="7" type="stmt"/>
-        <line num="35" count="7" type="cond" truecount="1" falsecount="1"/>
-        <line num="36" count="7" type="stmt"/>
-        <line num="42" count="7" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+        <line num="28" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="11" type="stmt"/>
+        <line num="35" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="11" type="stmt"/>
+        <line num="42" count="11" type="stmt"/>
       </file>
     </package>
     <package name="app.components.grid.cell">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.jsx" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/components/grid/cell/index.jsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
       </file>
     </package>
     <package name="app.components.header">
@@ -116,11 +116,37 @@
         <line num="3" count="3" type="stmt"/>
       </file>
     </package>
+    <package name="app.pages.foodMenu.components.menuItems.menuItem">
+      <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+      <file name="index.jsx" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/pages/foodMenu/components/menuItems/menuItem/index.jsx">
+        <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+      </file>
+      <file name="style.js" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/pages/foodMenu/components/menuItems/menuItem/style.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="app.state">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.jsx" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/state/index.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
       </file>
       <file name="selectors.jsx" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/state/selectors.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -141,12 +167,12 @@
       </file>
       <file name="reducers.jsx" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/state/menu/reducers.jsx">
         <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="12" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="12" count="7" type="cond" truecount="4" falsecount="0"/>
         <line num="14" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
       </file>
       <file name="sagas.jsx" path="/home/jpg/Workspace/Dextra/hamburgueria-client/app/state/menu/sagas.jsx">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>

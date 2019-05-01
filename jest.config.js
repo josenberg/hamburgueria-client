@@ -5,6 +5,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': '<rootDir>/__mocks__/fileMock',
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
 };

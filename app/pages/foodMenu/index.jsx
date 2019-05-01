@@ -10,16 +10,16 @@ import TitleContainer from '@/components/titleContainer';
 import { getMenu } from '@/state/menu/selectors';
 import { fetchMenu } from '@/state/menu/actions';
 
+import MenuItems from './components/menuItems';
 
 import * as styles from './style';
-
-import BurgerImage from './burger.png';
-import PlusImage from './plus.png';
 
 const FoodMenu = (props) => {
   useEffect(() => {
     props.fetchMenu();
-  });
+  }, []);
+
+  const { menu } = props;
 
   return (
     <Grid columns="1fr" rows="auto auto" style={styles.container}>
@@ -31,20 +31,8 @@ const FoodMenu = (props) => {
           subtitleTarget={CUSTOM_ORDER}
         />
       </Grid.Cell>
-      <Grid.Cell>
-        <Grid columns="100px 280px auto" rows="1" style={styles.burgersContainer}>
-          <Grid.Cell column="1" row="1">
-            <img src={BurgerImage} alt="burger" style={styles.burgerImage} />
-          </Grid.Cell>
-          <Grid.Cell column="2" row="1">
-            <h2 style={styles.burgerName}> X-Bacon </h2>
-            <p style={styles.burgerDescription}> Ovo, bacon, hambúrguer de carne e queijo </p>
-            <p style={styles.burgerPrice}> R$ 20,00 </p>
-          </Grid.Cell>
-          <Grid.Cell column="3" row="1" style={styles.iconContainer}>
-            <img src={PlusImage} alt="Add to cart" />
-          </Grid.Cell>
-        </Grid>
+      <Grid.Cell style={styles.menuItemsContainer}>
+        <MenuItems items={menu} />
       </Grid.Cell>
     </Grid>
   );
@@ -53,6 +41,7 @@ const FoodMenu = (props) => {
 FoodMenu.propTypes = {
   push: PropTypes.func.isRequired,
   fetchMenu: PropTypes.func.isRequired,
+  menu: PropTypes.array,
 };
 
 const mapDispatchToProps = {

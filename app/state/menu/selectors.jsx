@@ -1,1 +1,1 @@
-export const getMenu = state => state;
+export const getMenu = state => state.menu.menuItems;
