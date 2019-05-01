@@ -13,7 +13,7 @@ const paths = {
 };
 
 const config = {
-  entry: `${APP_DIR}/main.jsx`,
+  entry: ['babel-polyfill', `${APP_DIR}/main.jsx`],
   output: {
     filename: 'bundle.js',
     path: BUILD_DIR,

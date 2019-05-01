@@ -41,8 +41,8 @@ Cell.propTypes = {
     PropTypes.node,
   ]).isRequired,
   style: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.shape),
-    PropTypes.shape,
+    PropTypes.arrayOf(PropTypes.shape({})),
+    PropTypes.shape({}),
   ]),
   rowSpan: PropTypes.string,
   colSpan: PropTypes.string,
