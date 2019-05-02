@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { isEmpty } from 'ramda';
 
 import Grid from '@/components/grid';
 import Button from '@/components/button';
@@ -7,6 +8,10 @@ import Button from '@/components/button';
 import { calculatePrice, formatCurrency } from '@/utilities/price';
 
 import * as styles from './style';
+
+const getQuantityOfAllIngredients = item => (
+  item.ingredients.reduce((total, { quantity }) => total + quantity, 0)
+);
 
 const getQuantityByIngredient = (item, id) => {
   const itemIngredient = item.ingredients.find(({ id: ingredientId }) => ingredientId === id);
@@ -60,7 +65,7 @@ const IngredientsPicker = ({
       </p>
     </Grid.Cell>
     <Grid.Cell row="4">
-      <Grid rows="auto" columns="1fr 1fr" columnGap="20px" style={styles.controlsContainer}>
+      <Grid rows="auto" columns="1fr 1fr" columnGap="20px">
         <Grid.Cell row="1" column="1">
           {onRefuse ? (
             <Button
@@ -73,9 +78,8 @@ const IngredientsPicker = ({
         <Grid.Cell row="1" column="2">
           {onAccept ? (
             <Button
-              onClickAction={onAccept}
+              onClickAction={() => (getQuantityOfAllIngredients(item) > 0 ? onAccept() : null)}
               type="primary"
-              style={styles.addToCartButton}
               label="Add To Cart"
             />
           ) : null}

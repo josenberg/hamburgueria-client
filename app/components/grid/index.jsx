@@ -32,6 +32,7 @@ Grid.defaultProps = {
   style: {},
   rowGap: '0px',
   colGap: '0px',
+  children: null,
 };
 
 Grid.propTypes = {
@@ -40,7 +41,7 @@ Grid.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
-  ]).isRequired,
+  ]),
   style: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.shape({})),
     PropTypes.shape({}),

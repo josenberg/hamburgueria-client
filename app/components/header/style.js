@@ -17,3 +17,9 @@ export const subTitle = {
   marginTop: '-25px',
   fontSize: '22px',
 };
+
+export const cartContainer = {
+  alignItems: 'end',
+  justifyContent: 'end',
+  padding: '0 30px',
+};

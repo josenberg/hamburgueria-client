@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">76.92% </span>
+        <span class="strong">64.71% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/13</span>
+        <span class='fraction'>11/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">37.5% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/6</span>
+        <span class='fraction'>3/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">44.44% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">66.67% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>4/6</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/12</span>
+        <span class='fraction'>10/15</span>
       </div>
     </div>
     <p class="quiet">
@@ -151,7 +151,11 @@
 <a name='L103'></a><a href='#L103'>103</a>
 <a name='L104'></a><a href='#L104'>104</a>
 <a name='L105'></a><a href='#L105'>105</a>
-<a name='L106'></a><a href='#L106'>106</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -159,6 +163,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
@@ -226,8 +235,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -258,6 +266,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import PropTypes from 'prop-types';
+import { isEmpty } from 'ramda';
 &nbsp;
 import Grid from '@/components/grid';
 import Button from '@/components/button';
@@ -265,6 +274,10 @@ import Button from '@/components/button';
 import { calculatePrice, formatCurrency } from '@/utilities/price';
 &nbsp;
 import * as styles from './style';
+&nbsp;
+const getQuantityOfAllIngredients = <span class="fstat-no" title="function not covered" >it</span>em =&gt; (
+<span class="cstat-no" title="statement not covered" >  item.ingredients.reduce(<span class="fstat-no" title="function not covered" >(t</span>otal, { quantity }) =&gt; <span class="cstat-no" title="statement not covered" >total + quantity,</span> 0)</span>
+);
 &nbsp;
 const getQuantityByIngredient = (item, id) =&gt; {
   const itemIngredient = item.ingredients.find(({ id: ingredientId }) =&gt; ingredientId === id);
@@ -318,7 +331,7 @@ const IngredientsPicker = ({
       &lt;/p&gt;
     &lt;/Grid.Cell&gt;
     &lt;Grid.Cell row="4"&gt;
-      &lt;Grid rows="auto" columns="1fr 1fr" columnGap="20px" style={styles.controlsContainer}&gt;
+      &lt;Grid rows="auto" columns="1fr 1fr" columnGap="20px"&gt;
         &lt;Grid.Cell row="1" column="1"&gt;
           {onRefuse ? (
 <span class="branch-0 cbranch-no" title="branch not covered" >            &lt;Button</span>
@@ -331,9 +344,8 @@ const IngredientsPicker = ({
         &lt;Grid.Cell row="1" column="2"&gt;
           {onAccept ? (
 <span class="branch-0 cbranch-no" title="branch not covered" >            &lt;Button</span>
-              onClickAction={onAccept}
+              onClickAction={<span class="fstat-no" title="function not covered" >()</span> =&gt; (<span class="cstat-no" title="statement not covered" >getQuantityOfAllIngredients(item) &gt; 0 ? onAccept() : null)</span>}
               type="primary"
-              style={styles.addToCartButton}
               label="Add To Cart"
             /&gt;
           ) : null}
@@ -367,7 +379,7 @@ export default IngredientsPicker;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu May 02 2019 03:01:04 GMT-0300 (-03)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu May 02 2019 08:46:28 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

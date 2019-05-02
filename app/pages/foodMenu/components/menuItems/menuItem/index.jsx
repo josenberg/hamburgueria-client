@@ -41,7 +41,7 @@ const MenuItem = ({ item, rules, addToCart }) => (
             {`${formatCurrency(calculatePrice(item.ingredients, rules))}`}
           </p>
         </Grid.Cell>
-        <Grid.Cell column="3" row="1" style={styles.iconContainer}>
+        <Grid.Cell column="3" row="1">
           <Button
             onClickAction={() => addToCart(item)}
             type="plus"

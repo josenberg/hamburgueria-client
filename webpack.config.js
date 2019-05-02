@@ -39,6 +39,7 @@ const config = {
   },
   devServer: {
     historyApiFallback: true,
+    port: 5555,
   },
   devtool: 'source-map',
   module: {

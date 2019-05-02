@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  jpg:
+    image: jpg
+    build: .
+    ports:
+- 5555:5555

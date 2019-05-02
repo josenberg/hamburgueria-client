@@ -31,6 +31,7 @@ Cell.defaultProps = {
   style: null,
   rowSpan: null,
   colSpan: null,
+  children: null,
 };
 
 Cell.propTypes = {
@@ -39,7 +40,7 @@ Cell.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
-  ]).isRequired,
+  ]),
   style: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.shape({})),
     PropTypes.shape({}),
