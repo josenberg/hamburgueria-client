@@ -7,9 +7,9 @@ Feito com muito carinho.
 `npm install`  
 `npm run watch`  
 
-### Ambiente de Desenvolvimento
+### Docker
 `docker build -t "TAG:VERSION" .`  
-`RUN:  docker run --net=host TAG:VERSION`  
+`docker run --net=host TAG:VERSION`  
 
 ### Testes
 `npm run test`
