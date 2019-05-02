@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IngredientPicker should render without issues 1`] = `
+<div
+  className="grid"
+  style={
+    Object {
+      "colGap": "0px",
+      "display": "grid",
+      "gridTemplateColumns": "1fr auto auto",
+      "gridTemplateRows": "auto auto",
+      "rowGap": "0px",
+    }
+  }
+>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "auto",
+        "gridRow": "1",
+      }
+    }
+  >
+    <h3
+      style={
+        Object {
+          "margin": "0 0 20px 0",
+        }
+      }
+    >
+       Escolha os Ingredientes do seu lanche 
+    </h3>
+  </div>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "auto",
+        "gridRow": "2",
+      }
+    }
+  >
+    <div
+      className="grid"
+      style={
+        Object {
+          "colGap": "0px",
+          "display": "grid",
+          "gridTemplateColumns": "auto 40px 40px 40px",
+          "gridTemplateRows": "auto",
+          "rowGap": "10px",
+        }
+      }
+    >
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "display": "grid",
+            "gridColumn": "1",
+            "gridRow": "1",
+          }
+        }
+      >
+        Alface
+      </div>
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "display": "grid",
+            "gridColumn": "2",
+            "gridRow": "1",
+          }
+        }
+      >
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "none",
+              "border": "none",
+              "margin": "0",
+              "padding": "0",
+            }
+          }
+          type="submit"
+        >
+          <img
+            alt=""
+            src="test-file-stub"
+          />
+        </button>
+      </div>
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "display": "grid",
+            "gridColumn": "3",
+            "gridRow": "1",
+            "textAlign": "center",
+          }
+        }
+      >
+        1
+      </div>
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "display": "grid",
+            "gridColumn": "4",
+            "gridRow": "1",
+          }
+        }
+      >
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "none",
+              "border": "none",
+              "margin": "0",
+              "padding": "0",
+            }
+          }
+          type="submit"
+        >
+          <img
+            alt=""
+            src="test-file-stub"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "auto",
+        "gridRow": "3",
+      }
+    }
+  >
+    <p
+      style={
+        Object {
+          "fontFamily": "Lalezar, cursive",
+          "fontSize": "30px",
+          "margin": "0",
+          "padding": "0 10px 0 0",
+          "textAlign": "right",
+        }
+      }
+    >
+      R$ 0,40
+    </p>
+  </div>
+</div>
+`;

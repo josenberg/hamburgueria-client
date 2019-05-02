@@ -28,4 +28,13 @@ describe('API calls', () => {
       method: 'GET',
     });
   });
+
+  it('Should fetch ingredients', () => {
+    API.fetchIngredients();
+
+    expect(global.fetch).toHaveBeenCalledTimes(3);
+    expect(global.fetch).toHaveBeenCalledWith(`${API.API_URL}/ingredients`, {
+      method: 'GET',
+    });
+  });
 });

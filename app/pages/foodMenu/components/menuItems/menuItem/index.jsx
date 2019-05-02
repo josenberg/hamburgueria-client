@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@/components/grid';
+import Button from '@/components/button';
 
 import { calculatePrice, formatCurrency } from '@/utilities/price';
 
 import * as styles from './style';
 
 import BurgerImage from './images/burger.png';
-import PlusImage from './images/plus.png';
 
 export const formatIngredientsList = ingredients => (
   ingredients.reduce((result, { displayName }, idx) => {
@@ -23,7 +23,7 @@ export const formatIngredientsList = ingredients => (
   }, '')
 );
 
-const MenuItem = ({ displayName, ingredients, rules }) => (
+const MenuItem = ({ item, rules, addToCart }) => (
   <Grid columns="1fr" rows="auto auto">
     <Grid.Cell>
       <Grid columns="100px 280px auto" rows="1" style={styles.burgersContainer}>
@@ -32,17 +32,20 @@ const MenuItem = ({ displayName, ingredients, rules }) => (
         </Grid.Cell>
         <Grid.Cell column="2" row="1">
           <h2 style={styles.burgerName}>
-            {displayName}
+            {item.displayName}
           </h2>
           <p style={styles.burgerDescription}>
-            {formatIngredientsList(ingredients)}
+            {formatIngredientsList(item.ingredients)}
           </p>
           <p style={styles.burgerPrice}>
-            {`${formatCurrency(calculatePrice(ingredients, rules))}`}
+            {`${formatCurrency(calculatePrice(item.ingredients, rules))}`}
           </p>
         </Grid.Cell>
         <Grid.Cell column="3" row="1" style={styles.iconContainer}>
-          <img src={PlusImage} alt="Add to cart" />
+          <Button
+            onClickAction={() => addToCart(item)}
+            type="plus"
+          />
         </Grid.Cell>
       </Grid>
     </Grid.Cell>
@@ -56,9 +59,9 @@ MenuItem.defaultProps = {
 };
 
 MenuItem.propTypes = {
-  displayName: PropTypes.string,
-  ingredients: PropTypes.array,
+  item: PropTypes.object,
   rules: PropTypes.array,
+  addToCart: PropTypes.func.isRequired,
 };
 
 export default MenuItem;

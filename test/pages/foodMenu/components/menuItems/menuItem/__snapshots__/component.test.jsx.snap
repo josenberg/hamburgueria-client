@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header should render without issues 1`] = `
+exports[`MenuItem should render without issues 1`] = `
 <div
   className="grid"
   style={
@@ -93,24 +93,36 @@ exports[`Header should render without issues 1`] = `
             }
           }
         >
-          R$ NaN
+          NaN
         </p>
       </div>
       <div
         className="grid-cell"
         style={
           Object {
-            "alignItems": "center",
             "display": "grid",
             "gridColumn": "3",
             "gridRow": "1",
           }
         }
       >
-        <img
-          alt="Add to cart"
-          src="test-file-stub"
-        />
+        <button
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "none",
+              "border": "none",
+              "margin": "0",
+              "padding": "0",
+            }
+          }
+          type="submit"
+        >
+          <img
+            alt=""
+            src="test-file-stub"
+          />
+        </button>
       </div>
     </div>
   </div>

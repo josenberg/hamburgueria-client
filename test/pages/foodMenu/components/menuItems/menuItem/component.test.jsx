@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import MenuItem from '../../../../../../app/pages/foodMenu/components/menuItems/menuItem';
 
-test('Header should render without issues', () => {
+test('MenuItem should render without issues', () => {
   const ingredients = [{
     displayName: 'Lanche',
     ingredients: [{
@@ -16,11 +16,17 @@ test('Header should render without issues', () => {
     }],
   }];
 
+  const item = {
+    ingredients,
+    displayName: 'X-Princesa',
+  };
+
   const component = renderer.create(
     <MenuItem
       key="xprincesa"
-      displayName="X-Princesa"
-      ingredients={ingredients}
+      item={item}
+      rules={[]}
+      addToCart={() => {}}
     />,
   );
   const tree = component.toJSON();

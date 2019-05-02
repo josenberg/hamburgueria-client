@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render the type="cancel" without issues 1`] = `
+<div
+  className="grid"
+  style={
+    Object {
+      "backgroundColor": "#7F171F",
+      "border": "5px solid #7F5417",
+      "colGap": "0px",
+      "color": "white",
+      "display": "grid",
+      "fontFamily": "'Lalezar', cursive",
+      "gridTemplateColumns": "1fr auto",
+      "gridTemplateRows": "1",
+      "margin": "0 auto",
+      "rowGap": "0px",
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "1",
+        "gridRow": "auto",
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "marginBottom": "0px",
+          "textAlign": "center",
+        }
+      }
+    >
+      
+    </h1>
+    <a
+      href=""
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "white",
+          "paddingRight": "5px",
+          "textAlign": "right",
+        }
+      }
+    >
+      
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Button should render the type="minus" without issues 1`] = `
+<div
+  className="grid"
+  style={
+    Object {
+      "backgroundColor": "#7F171F",
+      "border": "5px solid #7F5417",
+      "colGap": "0px",
+      "color": "white",
+      "display": "grid",
+      "fontFamily": "'Lalezar', cursive",
+      "gridTemplateColumns": "1fr auto",
+      "gridTemplateRows": "1",
+      "margin": "0 auto",
+      "rowGap": "0px",
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "1",
+        "gridRow": "auto",
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "marginBottom": "0px",
+          "textAlign": "center",
+        }
+      }
+    >
+      
+    </h1>
+    <a
+      href=""
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "white",
+          "paddingRight": "5px",
+          "textAlign": "right",
+        }
+      }
+    >
+      
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Button should render the type="plus" without issues 1`] = `
+<div
+  className="grid"
+  style={
+    Object {
+      "backgroundColor": "#7F171F",
+      "border": "5px solid #7F5417",
+      "colGap": "0px",
+      "color": "white",
+      "display": "grid",
+      "fontFamily": "'Lalezar', cursive",
+      "gridTemplateColumns": "1fr auto",
+      "gridTemplateRows": "1",
+      "margin": "0 auto",
+      "rowGap": "0px",
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "1",
+        "gridRow": "auto",
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "marginBottom": "0px",
+          "textAlign": "center",
+        }
+      }
+    >
+      
+    </h1>
+    <a
+      href=""
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "white",
+          "paddingRight": "5px",
+          "textAlign": "right",
+        }
+      }
+    >
+      
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Button should render the type="primary" without issues 1`] = `
+<div
+  className="grid"
+  style={
+    Object {
+      "backgroundColor": "#7F171F",
+      "border": "5px solid #7F5417",
+      "colGap": "0px",
+      "color": "white",
+      "display": "grid",
+      "fontFamily": "'Lalezar', cursive",
+      "gridTemplateColumns": "1fr auto",
+      "gridTemplateRows": "1",
+      "margin": "0 auto",
+      "rowGap": "0px",
+      "width": "400px",
+    }
+  }
+>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "1",
+        "gridRow": "auto",
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "marginBottom": "0px",
+          "textAlign": "center",
+        }
+      }
+    >
+      
+    </h1>
+    <a
+      href=""
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "white",
+          "paddingRight": "5px",
+          "textAlign": "right",
+        }
+      }
+    >
+      
+    </a>
+  </div>
+</div>
+`;

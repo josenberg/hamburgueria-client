@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">91.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/11</span>
+        <span class='fraction'>11/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>3/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">91.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>11/11</span>
+        <span class='fraction'>11/12</span>
       </div>
     </div>
     <p class="quiet">
@@ -106,7 +106,16 @@
 <a name='L58'></a><a href='#L58'>58</a>
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,6 +158,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -160,7 +172,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -170,11 +184,13 @@
 import PropTypes from 'prop-types';
 &nbsp;
 import Grid from '@/components/grid';
+import Button from '@/components/button';
+&nbsp;
+import { calculatePrice, formatCurrency } from '@/utilities/price';
 &nbsp;
 import * as styles from './style';
 &nbsp;
 import BurgerImage from './images/burger.png';
-import PlusImage from './images/plus.png';
 &nbsp;
 export const formatIngredientsList = ingredients =&gt; (
   ingredients.reduce((result, { displayName }, idx) =&gt; {
@@ -189,7 +205,7 @@ export const formatIngredientsList = ingredients =&gt; (
   }, '')
 );
 &nbsp;
-const MenuItem = ({ displayName, ingredients }) =&gt; (
+const MenuItem = ({ item, rules, addToCart }) =&gt; (
   &lt;Grid columns="1fr" rows="auto auto"&gt;
     &lt;Grid.Cell&gt;
       &lt;Grid columns="100px 280px auto" rows="1" style={styles.burgersContainer}&gt;
@@ -198,17 +214,20 @@ const MenuItem = ({ displayName, ingredients }) =&gt; (
         &lt;/Grid.Cell&gt;
         &lt;Grid.Cell column="2" row="1"&gt;
           &lt;h2 style={styles.burgerName}&gt;
-            {displayName}
+            {item.displayName}
           &lt;/h2&gt;
           &lt;p style={styles.burgerDescription}&gt;
-            {formatIngredientsList(ingredients)}
+            {formatIngredientsList(item.ingredients)}
           &lt;/p&gt;
           &lt;p style={styles.burgerPrice}&gt;
-            R$ 20,00
+            {`${formatCurrency(calculatePrice(item.ingredients, rules))}`}
           &lt;/p&gt;
         &lt;/Grid.Cell&gt;
         &lt;Grid.Cell column="3" row="1" style={styles.iconContainer}&gt;
-          &lt;img src={PlusImage} alt="Add to cart" /&gt;
+          &lt;Button
+            onClickAction={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >addToCart(item)}</span>
+            type="plus"
+          /&gt;
         &lt;/Grid.Cell&gt;
       &lt;/Grid&gt;
     &lt;/Grid.Cell&gt;
@@ -218,11 +237,13 @@ const MenuItem = ({ displayName, ingredients }) =&gt; (
 MenuItem.defaultProps = {
   displayName: '',
   ingredients: [],
+  rules: [],
 };
 &nbsp;
 MenuItem.propTypes = {
-  displayName: PropTypes.string,
-  ingredients: PropTypes.array,
+  item: PropTypes.object,
+  rules: PropTypes.array,
+  addToCart: PropTypes.func.isRequired,
 };
 &nbsp;
 export default MenuItem;
@@ -232,7 +253,7 @@ export default MenuItem;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 01 2019 19:33:02 GMT-0300 (-03)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu May 02 2019 02:19:30 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../../../../prettify.js"></script>

@@ -1,4 +1,4 @@
-export const calculatePrice = (ingredients, rules = []) => {
+export const calculatePrice = (ingredients = [], rules = []) => {
   let fullPrice = ingredients.reduce((full, { price, quantity }) => (
     full + (price * quantity)
   ), 0);

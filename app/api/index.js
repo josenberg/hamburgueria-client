@@ -15,3 +15,11 @@ export function fetchRules() {
     .then(res => res.json())
     .then(data => data);
 }
+
+export function fetchIngredients() {
+  return fetch(`${API_URL}/ingredients`, {
+    method: 'GET',
+  })
+    .then(res => res.json())
+    .then(data => data);
+}

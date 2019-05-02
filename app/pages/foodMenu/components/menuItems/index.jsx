@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import MenuItem from './menuItem';
 
-const MenuItems = ({ items, rules }) => (
-  items.map(({ displayName, ingredients, name }) => (
+const MenuItems = ({ items, rules, addToCart }) => (
+  items.map(item => (
     <MenuItem
-      key={name}
-      displayName={displayName}
-      ingredients={ingredients}
+      key={item.name}
+      item={item}
       rules={rules}
+      addToCart={addToCart}
     />
   ))
 );
@@ -17,6 +17,7 @@ const MenuItems = ({ items, rules }) => (
 MenuItems.propTypes = {
   items: PropTypes.array,
   rules: PropTypes.array,
+  addToCart: PropTypes.func.isRequired,
 };
 
 export default MenuItems;

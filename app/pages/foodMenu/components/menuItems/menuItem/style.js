@@ -19,7 +19,3 @@ export const burgerDescription = {
 export const burgerPrice = {
   margin: '0',
 };
-
-export const iconContainer = {
-  alignItems: 'center',
-};
