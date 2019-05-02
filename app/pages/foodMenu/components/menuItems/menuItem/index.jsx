@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import Grid from '@/components/grid';
 
+import { calculatePrice, formatCurrency } from '@/utilities/price';
+
 import * as styles from './style';
 
 import BurgerImage from './images/burger.png';
@@ -21,7 +23,7 @@ export const formatIngredientsList = ingredients => (
   }, '')
 );
 
-const MenuItem = ({ displayName, ingredients }) => (
+const MenuItem = ({ displayName, ingredients, rules }) => (
   <Grid columns="1fr" rows="auto auto">
     <Grid.Cell>
       <Grid columns="100px 280px auto" rows="1" style={styles.burgersContainer}>
@@ -36,7 +38,7 @@ const MenuItem = ({ displayName, ingredients }) => (
             {formatIngredientsList(ingredients)}
           </p>
           <p style={styles.burgerPrice}>
-            R$ 20,00
+            {`${formatCurrency(calculatePrice(ingredients, rules))}`}
           </p>
         </Grid.Cell>
         <Grid.Cell column="3" row="1" style={styles.iconContainer}>
@@ -50,11 +52,13 @@ const MenuItem = ({ displayName, ingredients }) => (
 MenuItem.defaultProps = {
   displayName: '',
   ingredients: [],
+  rules: [],
 };
 
 MenuItem.propTypes = {
   displayName: PropTypes.string,
   ingredients: PropTypes.array,
+  rules: PropTypes.array,
 };
 
 export default MenuItem;

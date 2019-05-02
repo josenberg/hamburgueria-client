@@ -10,19 +10,25 @@ import TitleContainer from '@/components/titleContainer';
 import { getMenu } from '@/state/menu/selectors';
 import { fetchMenu } from '@/state/menu/actions';
 
+
+import { getRules } from '@/state/rules/selectors';
+import { fetchRules } from '@/state/rules/actions';
+
 import MenuItems from './components/menuItems';
 
 import * as styles from './style';
+import Promotions from '../../components/promotions';
 
 const FoodMenu = (props) => {
   useEffect(() => {
     props.fetchMenu();
+    props.fetchRules();
   }, []);
 
-  const { menu } = props;
+  const { menu, rules } = props;
 
   return (
-    <Grid columns="1fr" rows="auto auto" style={styles.container}>
+    <Grid columns="1fr" rows="auto auto auto" style={styles.container}>
       <Grid.Cell row="1">
         <TitleContainer
           title="MENU"
@@ -32,7 +38,10 @@ const FoodMenu = (props) => {
         />
       </Grid.Cell>
       <Grid.Cell style={styles.menuItemsContainer}>
-        <MenuItems items={menu} />
+        <MenuItems items={menu} rules={rules} />
+      </Grid.Cell>
+      <Grid.Cell style={styles.menuItemsContainer}>
+        <Promotions rules={rules} />
       </Grid.Cell>
     </Grid>
   );
@@ -41,16 +50,20 @@ const FoodMenu = (props) => {
 FoodMenu.propTypes = {
   push: PropTypes.func.isRequired,
   fetchMenu: PropTypes.func.isRequired,
+  fetchRules: PropTypes.func.isRequired,
   menu: PropTypes.array,
+  rules: PropTypes.array,
 };
 
 const mapDispatchToProps = {
   push,
   fetchMenu,
+  fetchRules,
 };
 
 const mapStateToProps = state => ({
   menu: getMenu(state),
+  rules: getRules(state),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FoodMenu);

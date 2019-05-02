@@ -7,3 +7,11 @@ export function fetchMenu() {
     .then(res => res.json())
     .then(data => data);
 }
+
+export function fetchRules() {
+  return fetch(`${API_URL}/rules`, {
+    method: 'GET',
+  })
+    .then(res => res.json())
+    .then(data => data);
+}

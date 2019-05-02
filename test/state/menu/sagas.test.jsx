@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import { call, put } from 'redux-saga/effects';
 
 import { fetchMenu } from '../../../app/state/menu/sagas';
-import {fetchMenuSuccess, fetchMenuFailure } from '../../../app/state/menu/actions';
+import { fetchMenuSuccess, fetchMenuFailure } from '../../../app/state/menu/actions';
 import * as API from '../../../app/api';
 
 describe('Sagas Reducer', () => {

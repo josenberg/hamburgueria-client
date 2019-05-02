@@ -3,17 +3,27 @@ import * as API from '../../app/api';
 global.fetch = require('jest-fetch-mock');
 
 describe('API calls', () => {
-  it('Should try to ', () => {
+  beforeAll(() => {
     const mockSuccessResponse = {};
-    const mockJsonPromise = Promise.resolve(mockSuccessResponse); // 2
-    const mockFetchPromise = Promise.resolve({ // 3
+    const mockJsonPromise = Promise.resolve(mockSuccessResponse);
+    const mockFetchPromise = Promise.resolve({
       json: () => mockJsonPromise,
     });
-    jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise); // 4
+    jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+  });
 
+  it('Should fetch menu', () => {
     API.fetchMenu();
-
     expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(global.fetch).toHaveBeenCalledWith(`${API.API_URL}/menu`, {
+      method: 'GET',
+    });
+  });
+
+  it('Should fetch rules', () => {
+    API.fetchRules();
+
+    expect(global.fetch).toHaveBeenCalledTimes(2);
     expect(global.fetch).toHaveBeenCalledWith(`${API.API_URL}/menu`, {
       method: 'GET',
     });

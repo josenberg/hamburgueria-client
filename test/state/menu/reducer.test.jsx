@@ -15,7 +15,7 @@ describe('Menu Reducer', () => {
       });
   });
 
-  it('should return loading true when the menu is requested', () => {
+  it('should return loading true when the menu are requested', () => {
     expect(reducer(undefined, {
       type: MENU_REQUESTED,
     }))
