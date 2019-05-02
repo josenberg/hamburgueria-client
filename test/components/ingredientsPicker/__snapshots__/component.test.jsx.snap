@@ -162,5 +162,49 @@ exports[`IngredientPicker should render without issues 1`] = `
       R$ 0,40
     </p>
   </div>
+  <div
+    className="grid-cell"
+    style={
+      Object {
+        "display": "grid",
+        "gridColumn": "auto",
+        "gridRow": "4",
+      }
+    }
+  >
+    <div
+      className="grid"
+      style={
+        Object {
+          "colGap": "0px",
+          "display": "grid",
+          "gridTemplateColumns": "1fr 1fr",
+          "gridTemplateRows": "auto",
+          "rowGap": "0px",
+        }
+      }
+    >
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "display": "grid",
+            "gridColumn": "1",
+            "gridRow": "1",
+          }
+        }
+      />
+      <div
+        className="grid-cell"
+        style={
+          Object {
+            "display": "grid",
+            "gridColumn": "2",
+            "gridRow": "1",
+          }
+        }
+      />
+    </div>
+  </div>
 </div>
 `;

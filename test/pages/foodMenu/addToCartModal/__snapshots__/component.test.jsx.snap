@@ -8,12 +8,3 @@ exports[`Add To Cart Modal should render without issues 1`] = `
   rules={Array []}
 />
 `;
-
-exports[`Header should render without issues 1`] = `
-<addToCartModal
-  ingredients={Array []}
-  isOpen={false}
-  item={Object {}}
-  rules={Array []}
-/>
-`;

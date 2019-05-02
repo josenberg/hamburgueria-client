@@ -21,6 +21,8 @@ const IngredientsPicker = ({
   rules,
   ingredients,
   updateItem,
+  onRefuse,
+  onAccept,
 }) => (
   <Grid columns="1fr auto auto" rows="auto auto">
     <Grid.Cell row="1">
@@ -57,19 +59,46 @@ const IngredientsPicker = ({
         {formatCurrency(calculatePrice(item.ingredients, rules))}
       </p>
     </Grid.Cell>
+    <Grid.Cell row="4">
+      <Grid rows="auto" columns="1fr 1fr" columnGap="20px" style={styles.controlsContainer}>
+        <Grid.Cell row="1" column="1">
+          {onRefuse ? (
+            <Button
+              onClickAction={onRefuse}
+              type="cancel"
+              label="Cancel"
+            />
+          ) : null}
+        </Grid.Cell>
+        <Grid.Cell row="1" column="2">
+          {onAccept ? (
+            <Button
+              onClickAction={onAccept}
+              type="primary"
+              style={styles.addToCartButton}
+              label="Add To Cart"
+            />
+          ) : null}
+        </Grid.Cell>
+      </Grid>
+    </Grid.Cell>
   </Grid>
 );
 
 IngredientsPicker.defaultProps = {
   ingredients: [],
   item: {},
-  rules: []
+  rules: [],
+  onRefuse: null,
+  onAccept: null,
 };
 
 IngredientsPicker.propTypes = {
   ingredients: PropTypes.array,
   item: PropTypes.object,
   rules: PropTypes.array,
+  onRefuse: PropTypes.func,
+  onAccept: PropTypes.func,
   updateItem: PropTypes.func.isRequired,
 };
 
